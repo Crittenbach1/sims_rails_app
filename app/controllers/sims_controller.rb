@@ -1,4 +1,4 @@
-class HousesController < ApplicationController
+class SimsController < ApplicationController
   before_action :authenticate_user!
 
   def index
