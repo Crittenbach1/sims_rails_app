@@ -5,10 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
 
-   has_many :houses
-   has_many :rooms, :foreign_key => 'sim_id'
-   has_many :furniture, through: :rooms
-   
+   has_many :furnitures, :foreign_key => 'sim_id'
+   has_many :rooms, through: :furnitures
+
+  
 
 
     def self.new_with_session(params, session)

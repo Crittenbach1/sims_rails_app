@@ -1,4 +1,4 @@
 class Room < ApplicationRecord
   has_many :furnitures
-  belongs_to :house
+  has_many :sims, through: :furnitures, class_name: 'User'
 end
